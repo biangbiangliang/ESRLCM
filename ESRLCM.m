@@ -13,9 +13,7 @@ function out = ESRLCM(img)
           temp1 = ordfilt2(img, 9, mask);
           temp2 = ordfilt2(img, 8, mask);
           temp3 = ordfilt2(img, 7, mask);
-          temp4 = ordfilt2(img, 6, mask);
-          temp5 = ordfilt2(img, 5, mask);
-          temp = (4*temp1 + 2*temp2 + 2*temp3 + 1*temp4 + 1*temp5)/10;
+          temp = (4*temp1 + 3*temp2 + 2*temp3)/9;
        else
            mask = genCircle(win_size(i));
            mask_nonzero_num = sum(sum(mask ~= 0));
